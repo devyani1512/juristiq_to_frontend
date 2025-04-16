@@ -33,7 +33,7 @@ function LandingPage() {
   const handleFeedbackSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/feedback", feedbackData);
+      await axios.post("https://juristiqbackend.onrender.com/feedback", feedbackData);
       alert("Feedback submitted successfully");
       setFeedbackData({ email: "", feedback: "" });
       showFeedbackForm(false);

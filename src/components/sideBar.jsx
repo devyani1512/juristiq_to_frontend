@@ -26,7 +26,7 @@ function SideBar() {
   }
   const handleLogout = async () => {
     try {
-      await fetch("http://localhost:3000/logout", {
+      await fetch("https://juristiqbackend.onrender.com/logout", {
         method: "POST",
         credentials: "include",
       });

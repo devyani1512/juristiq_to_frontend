@@ -9,7 +9,7 @@ const ProtectedRoute = ({ children }) => {
   useEffect(() => {
     const verifyAuth = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/verify-token", {
+        const res = await axios.get("https://juristiqbackend.onrender.com/verify-token", {
           withCredentials: true
         });
         if (res.data.valid) {

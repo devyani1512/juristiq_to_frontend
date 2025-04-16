@@ -25,7 +25,7 @@ function Profile() {
   }, [])
   const fetchProfile = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/profile", { 
+      const response = await axios.get("https://juristiqbackend.onrender.com/profile", { 
         withCredentials: true 
       });
   
@@ -38,7 +38,7 @@ function Profile() {
   
   const fetchCaseStatistics = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/getcases",{withCredentials:true})
+      const response = await axios.get("https://juristiqbackend.onrender.com/getcases",{withCredentials:true})
       const cases = response.data
       const casesHandled = cases.length
       const casesWon = cases.filter((c) => c.status.toLowerCase() === "won").length
@@ -55,7 +55,7 @@ function Profile() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put("http://localhost:3000/updateProfile", advocate, { withCredentials: true })
+      await axios.put("https://juristiqbackend.onrender.com/updateProfile", advocate, { withCredentials: true })
       alert("Profile updated successfully!")
       setEditMode(false)
       fetchProfile()
